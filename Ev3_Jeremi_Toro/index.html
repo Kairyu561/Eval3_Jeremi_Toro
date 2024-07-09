@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora de Calorías</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Calculadora de Calorías Quemadas</h1>
+        <form id="caloriesForm">
+            <div class="mb-3">
+                <label for="weightInput" class="form-label">Peso (kg)</label>
+                <input type="number" class="form-control" id="weightInput" name="weight" min="1" max="120" required>
+                <div class="invalid-feedback">
+                    Ingrese un valor entre 1 y 120.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="timeInput" class="form-label">Minutos de ejercicio</label>
+                <input type="number" class="form-control" id="timeInput" name="time" min="5" max="150" required>
+                <div class="invalid-feedback">
+                    Ingrese un valor entre 5 y 150.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Actividad</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="activity" id="walkRadio" value="caminar" checked>
+                    <label class="form-check-label" for="walkRadio">Caminar</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="activity" id="runRadio" value="correr">
+                    <label class="form-check-label" for="runRadio">Correr</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Calcular Calorías</button>
+        </form>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
